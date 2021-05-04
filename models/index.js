@@ -30,4 +30,4 @@ Comment.belongsTo(Article, {
 })
 
 
-module.exports = { User, Article , Comment};
+module.exports = { User, Article, Comment};
