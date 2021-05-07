@@ -4,9 +4,9 @@
 <div class="card mb-2">
             <div class="card-body ms-3">
                 
-              <h5 class="card-title bg-primary text-light p-3">{{article.title}}</h5>
+              <h5 class="card-title bg-primary text-light p-3"><a class='text-light' href="/comment/{{id}}">{{article.title}}</a></h5>
               <div class="card-header">
-                Posted by {{user.user_name}} on 5/7/2021
+                Posted by {{user.user_name}} on {{article.created_at}}
               </div>
               <p class="card-text ps-4">{{article.content}}</p>
             </div>
