@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <title>Tech Blog</title>
+</head>
+<body>
+  <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/dashboard">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/signup">Signup</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/logout">Logout</a>
+              </li>
+        </div>
+      </nav>
+      <h1>The Tech Blog</h1>
+  </header>
+    <main>
+        <!-- Artticle Card -->
+        <div class="card">
+            <div class="card-body ms-3">
+                
+              <h5 class="card-title bg-primary text-light p-3">Why is MVC Important?</h5>
+              <div class="card-header">
+                Posted by Charles on 5/7/2021
+              </div>
+              <p class="card-text ps-4">It is easier to maintain a site with MVC.</p>
+            </div>
+          </div>
+        
+          <!-- Comment Card -->
+          <div class="card ms-5 mt-2">
+            <div class="card-body ms-3 comment-card"> 
+                <h5 class="card-title bg-primary text-light p-3"></h5>
+              <p class="card-text ps-4">It is also easier to separte repsonsibilities with MVC.</p>
+              <div class="card-footer">
+                Posted by Ron on 5/7/2021
+              </div>
+            </div>
+          </div>
+
+          <!-- login -->
+          <div class="card">
+            <div class="card-body ms-3">
+              <h5 class="card-title bg-primary text-light p-3">Login</h5>
+              <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">User Name</label>
+                  <input type="text" class="form-control" id="userName" aria-describedby="userNameHelp">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="login-password">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Signup -->
+          <div class="card">
+            <div class="card-body ms-3">
+              <h5 class="card-title bg-primary text-light p-3">Signup!</h5>
+              <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">User Name</label>
+                  <input type="text" class="form-control" id="userName" aria-describedby="userNameHelp">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="signup-password">
+                </div>
+                <p><a href="/signup">Sign Up</a> instead</p>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+</body>
+</html>
