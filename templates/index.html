@@ -67,11 +67,11 @@
               <h5 class="card-title bg-primary text-light p-3">Login</h5>
               <form>
                 <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">User Name</label>
-                  <input type="text" class="form-control" id="userName" aria-describedby="userNameHelp">
+                  <label for="login-userName" class="form-label">User Name</label>
+                  <input type="text" class="form-control" id="login-userName" aria-describedby="userNameHelp">
                 </div>
                 <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <label for="login-password" class="form-label">Password</label>
                   <input type="password" class="form-control" id="login-password">
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
@@ -85,8 +85,8 @@
               <h5 class="card-title bg-primary text-light p-3">Signup!</h5>
               <form>
                 <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">User Name</label>
-                  <input type="text" class="form-control" id="userName" aria-describedby="userNameHelp">
+                  <label for="signup-userName" class="form-label">User Name</label>
+                  <input type="text" class="form-control" id="signup-userName" aria-describedby="userNameHelp">
                 </div>
                 <div class="mb-3">
                   <label for="exampleInputPassword1" class="form-label">Password</label>
@@ -97,6 +97,26 @@
               </form>
             </div>
           </div>
+
+          <!-- Create Article -->
+
+          <div class="card">
+            <div class="card-body ms-3">
+              <h5 class="card-title bg-primary text-light p-3">Create Article</h5>
+              <form>
+                <div class="mb-3">
+                  <label for="create-title" class="form-label">Title</label>
+                  <input type="text" class="form-control" id="create-title" aria-describedby="userNameHelp">
+                </div>
+                <div class="mb-3">
+                  <label for="create-content" class="form-label">Content</label>
+                  <textarea class="form-control" id="create-content">
+                  </textarea>
+                <button type="submit" class="btn btn-primary mt-2">Post Article</button>
+              </form>
+            </div>
+          </div>
+
 
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
