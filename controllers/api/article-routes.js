@@ -20,7 +20,7 @@ router.post('/', async (req, res) => {
     const articleData = await Article.create({
       title: req.body.title,
       content: req.body.content,
-      user_id: req.session.user_name,
+      user_id: req.session.user_id,
     });
     res.status(200).json(articleData);
   } catch (err) {
