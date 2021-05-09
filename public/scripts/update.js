@@ -4,7 +4,9 @@ const updateFormHandler = async (event) => {
     // Collect values from the update form
     const title = document.querySelector('#update-title').value.trim();
     const content = document.querySelector('#update-content').value.trim();
-    const id = window.location.toString().split("/")[window.location.toString().split("/").length - 1];
+   //Code used from https://stackoverflow.com/questions/3730359/get-id-from-url-with-jquery
+    const url = window.location.pathname;
+    const id = url.substring(url.lastIndexOf('/') + 1);
     console.log(id);
   
     if (title && content) {
