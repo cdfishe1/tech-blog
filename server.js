@@ -1,3 +1,4 @@
+//dependencies
 const path = require('path');
 const express = require('express');
 const session = require('express-session');
@@ -5,8 +6,8 @@ const routes = require('./controllers');
 const exphbs = require('express-handlebars');
 const helpers = require('./utils/helpers');
 
-// const { Article, Comment, User } = require('./models');
 
+//session setup
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
