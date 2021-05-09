@@ -27,8 +27,9 @@ router.get('/', async (req, res) => {
   }
 });
 
+//Render individual articles to their own pages
 router.get('/articles/:id', async (req, res) => {
-  console.log(req.params.id);
+  console.log(req.body);
   try {
     const ArticleData = await Article.findByPk(req.params.id, {
       include: [
