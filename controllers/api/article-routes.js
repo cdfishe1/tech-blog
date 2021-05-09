@@ -28,5 +28,23 @@ router.post('/', async (req, res) => {
   }
 });
 
+router.put('/:id', async (req, res) => {
+  try {
+    const articleData = await Article.update({
+      title: req.body.title,
+      content: req.body.content,
+    },
+    {
+      where: {
+        id: req.params.id,
+      }
+    }
+    );
+    res.status(200).json(articleData);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
 module.exports = router;
 
