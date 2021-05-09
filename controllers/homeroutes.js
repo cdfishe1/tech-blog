@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Article, User } = require('../models');
+const { Article, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
@@ -27,27 +27,28 @@ router.get('/', async (req, res) => {
   }
 });
 
-// router.get('/Article/:id', async (req, res) => {
-//   try {
-//     const ArticleData = await Article.findByPk(req.params.id, {
-//       include: [
-//         {
-//           model: User,
-//           attributes: ['name'],
-//         },
-//       ],
-//     });
+router.get('/articles/:id', async (req, res) => {
+  console.log(req.params.id);
+  try {
+    const ArticleData = await Article.findByPk(req.params.id, {
+      include: [
+        {
+          model: Comment,
+          attributes: ['comment'],
+        },
+      ],
+    });
 
-//     const Article = ArticleData.get({ plain: true });
+    const article = ArticleData.get({ plain: true });
 
-//     res.render('Article', {
-//       ...Article,
-//       logged_in: req.session.logged_in
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
+    res.render('articles', {
+      article,
+      logged_in: req.session.logged_in
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 // // Use withAuth middleware to prevent access to route
 // router.get('/profile', withAuth, async (req, res) => {
@@ -100,6 +101,18 @@ router.get('/dashboard', (req, res) => {
   
     res.render('dashboard');
   });
+
+module.exports = router;
+
+// router.get('/articles', (req, res) => {
+//   // If the user is already logged in, redirect the request to another route
+//   if (!req.session.loggedIn) {
+//     res.redirect('/');
+//     return;
+//   }
+
+//   res.render('articles');
+// });
 
 module.exports = router;
 
