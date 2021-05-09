@@ -1,7 +1,11 @@
 /* tech blog */
 
+header {
+    background-color: aquamarine;
+}
+
 main {
-    width: 90%;
+    width: 70%;
     margin: 0 auto;
 }
 

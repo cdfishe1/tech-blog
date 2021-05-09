@@ -35,7 +35,8 @@ router.get('/articles/:id', async (req, res) => {
       include: [
         {
           model: Comment,
-          attributes: ['comment'],
+          
+          
         },
       ],
     });
