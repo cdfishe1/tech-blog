@@ -31,12 +31,10 @@ Site deployed at [Tech Blog](https://gentle-anchorage-28977.herokuapp.com/)
 
 ## Challenges
 
-* I really struggled on this project. This app throws a lot of errors with juggling the javascript files that I have not been able to resolve.
-* A user is able to create an account, login, create an article, and view the articles.
-* I have not been able to figure out how to update the articles, although the form mechanism for doing that is in place.
+* I really struggled on this project. This app throws a lot of errors that I have not been able to resolve.
+* A user is able to create an account, login, create an article, view articles, update articles, and delete articles.
 * I have not been able to figure out how to make comments on particular articles appear with those articles.
-* Finally, I have not be able to figure out how to make the authors of articles appear on the articles.
-
+* I have not been able to figure out how to leverage session id's for controlling access, despite having the withAuth helper function.
 
 ## Installation
 
