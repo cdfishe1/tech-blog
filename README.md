@@ -18,7 +18,7 @@ This is a platform for a tech blog with a CMS style interface that utilizes hand
 ## Techblog
 
 ### Screenshot
-![Screenshot](assets/techblog.gif)
+![Screenshot](assets/tech-blog.gif)
 
 
 ## Deployment
