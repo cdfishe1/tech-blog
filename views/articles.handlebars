@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/styles.css">
 <div class="card">
   <div class="card-body ms-3">
     <h5 class="card-title bg-primary text-light p-3">Update Article</h5>
@@ -11,8 +12,11 @@
         <textarea class="form-control" id="update-content">{{article.content}}
         </textarea>
       <button type="submit" class="btn btn-primary mt-2">Update Article</button>
+      <button type="submit" class="btn btn-danger mt-2 deleteBtn">Delete Article</button>
     </form>
+    
   </div>
 </div>
 
 <script src='/scripts/update.js'></script>
+<script src='/scripts/delete.js'></script>

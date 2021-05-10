@@ -46,5 +46,25 @@ router.put('/:id', async (req, res) => {
   }
 });
 
+router.delete('/:id', async (req, res) => {
+  try {
+    const articleData = await Article.destroy({
+      where: {
+        id: req.params.id,
+        
+      },
+    });
+
+    if (!articleData) {
+      res.status(404).json({ message: 'No article found with this id!' });
+      return;
+    }
+
+    res.status(200).json(articleData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;
 
