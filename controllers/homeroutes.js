@@ -2,7 +2,8 @@ const router = require('express').Router();
 const { Article, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', withAuth, async (req, res) => {
+//Renders articles on homepage
+router.get('/', async (req, res) => {
   try {
     // Get all Articles and JOIN with user data
     const articleData = await Article.findAll({
@@ -52,7 +53,7 @@ router.get('/articles/:id', async (req, res) => {
   }
 });
 
-
+//login router
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
   if (req.session.loggedIn) {
@@ -63,6 +64,7 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+//signup router
 router.get('/signup', (req, res) => {
     // If the user is already logged in, redirect the request to another route
     if (req.session.loggedIn) {
@@ -74,7 +76,7 @@ router.get('/signup', (req, res) => {
   });
 
 
-
+//logout router
 router.get('/dashboard', (req, res) => {
     // If the user is already logged in, redirect the request to another route
     if (!req.session.loggedIn) {
@@ -83,6 +85,7 @@ router.get('/dashboard', (req, res) => {
     }
   
     res.render('dashboard');
+    logged_in: req.session.logged_in
   });
 
 
